@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Enhanced HTML5 Form</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      margin: 20px;
+      background-color: #f9f9f9;
+    }
+    header, section, footer {
+      margin-bottom: 20px;
+      padding: 15px;
+      background: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+    }
+    h1, h2 {
+      color: #003366;
+    }
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-top: 10px;
+    }
+    table, th, td {
+      border: 1px solid #ccc;
+    }
+    th, td {
+      padding: 8px;
+      text-align: left;
+    }
+    form input, form select, form textarea, form button {
+      width: 100%;
+      padding: 8px;
+      margin: 6px 0;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    form button {
+      background: #003366;
+      color: white;
+      border: none;
+      cursor: pointer;
+    }
+    form button:hover {
+      background: #002244;
+    }
+  </style>
+</head>
+<body>
+
+<header>
+  <h1>Welcome to My HTML5 Demo Page</h1>
+  <p>This page demonstrates HTML lists, tables, media, and a well-structured HTML5 form with validation.</p>
+</header>
+
+<section>
+  <h2>My Favorite Tools</h2>
+  <ul>
+    <li>Visual Studio Code</li>
+    <li>Git & GitHub</li>
+    <li>Figma</li>
+  </ul>
+</section>
+
+<section>
+  <h2>Learning Progress</h2>
+  <table>
+    <thead>
+      <tr>
+        <th>Topic</th>
+        <th>Status</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>HTML</td>
+        <td>Completed</td>
+      </tr>
+      <tr>
+        <td>CSS</td>
+        <td>In Progress</td>
+      </tr>
+      <tr>
+        <td>JavaScript</td>
+        <td>Pending</td>
+      </tr>
+    </tbody>
+  </table>
+</section>
+
+<section>
+  <h2>Media Gallery</h2>
+  <!-- Image -->
+  <img src="profile.jpg" alt="Profile Picture" width="300">
+  
+  <!-- Audio -->
+  <h3>Background Music</h3>
+  <audio controls>
+    <source src="media/background.mp3" type="audio/mpeg">
+    Your browser does not support the audio tag.
+  </audio>
+</section>
+
+<section>
+  <h2>Motivational Video</h2>
+  <video controls width="320">
+    <source src="media/video.mp4" type="video/mp4">
+    Your browser does not support the video tag.
+  </video>
+</section>
+
+<section>
+  <h2>Registration Form</h2>
+  <form>
+    <fieldset>
+      <legend>Personal Info</legend>
+
+      <label for="fullname">Full Name:</label>
+      <input type="text" id="fullname" name="fullname" placeholder="Enter your full name" required autocomplete="name">
+
+      <label for="email">Email:</label>
+      <input type="email" id="email" name="email" placeholder="e.g. user@example.com" required autocomplete="email">
+
+      <label for="age">Age:</label>
+      <input type="number" id="age" name="age" min="10" max="100" required>
+
+      <label for="dob">Date of Birth:</label>
+      <input type="date" id="dob" name="dob" required>
+
+      <label for="country">Country:</label>
+      <select id="country" name="country" required>
+        <option value="">Select</option>
+        <option value="NG">Nigeria</option>
+        <option value="GH">Ghana</option>
+        <option value="KE">Kenya</option>
+      </select>
+    </fieldset>
+
+    <fieldset>
+      <legend>Account Setup</legend>
+
+      <label for="username">Username:</label>
+      <input type="text" id="username" name="username" pattern=".{5,}" title="Minimum 5 characters" required>
+
+      <label for="password">Password:</label>
+      <input type="password" id="password" name="password" minlength="6" required>
+
+      <label for="confirm">Confirm Password:</label>
+      <input type="password" id="confirm" name="confirm" minlength="6" required>
+
+      <label for="referral">Referral Code:</label>
+      <input type="text" id="referral" name="referral" value="HTML2025" readonly>
+      
+      <label>
+        <input type="checkbox" name="terms" required>
+        I agree to the terms and conditions
+      </label>
+    </fieldset>
+
+    <button type="submit">Register</button>
+  </form>
+</section>
+
+<footer>
+  <p>&copy; 2025 My HTML5 Demo Page</p>
+</footer>
+
+</body>
+</html>
